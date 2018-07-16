@@ -1,0 +1,31 @@
+﻿@model  IEnumerable< DemoPWACanalNET.Models.News>
+@{
+    ViewData["Title"] = "News";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="col-lg-10">
+            <br />
+            <h1>@item.Title</h1>
+            
+            <hr />
+
+        </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-5">
+
+        <img src='@item.Photo' style="max-width:400px; height:auto"
+             class="img-responsive" />
+    </div>
+    <div class="col-lg-7 text-left">
+        @item.Description
+    </div>
+    </div>
+    
+}
+

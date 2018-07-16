@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - DemoPWACanalNET</title>
 
+
+    <link rel="manifest" href="~/manifest.json" />
+
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
@@ -26,18 +29,33 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">DemoPWACanalNET</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">
+                   
+                    DemoPWACanalNET
+                </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="News">News</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Cadastro">Cadastro</a></li>
+
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container body-content">
+        <br />
+        <div class="row">
+            <div class="col-lg-2">
+                <img src="~/images/logo-canal-net.jpg" style="max-width:80px; height:auto;" class="img-responsive"/>
+            </div>
+            <div class="col-lg-8 text-left">
+                <h1>Demo - PWA - Canal .NET</h1>
+            </div>
+        </div>
+        
+        
         @RenderBody()
         <hr />
         <footer>
@@ -67,5 +85,7 @@
     </environment>
 
     @RenderSection("Scripts", required: false)
+    @*<script>'serviceWorker' in navigator && navigator.serviceWorker.register('/serviceworker')</script>*@
 </body>
+
 </html>
